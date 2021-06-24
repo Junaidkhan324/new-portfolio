@@ -45,6 +45,56 @@ a{
     opacity: 0;
 }
 
+svg {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .active svg {
+    transform: rotate(90deg);
+  }
+  path {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  path:nth-child(1) {
+    transform-origin: 36% 40%;
+  }
+  path:nth-child(2) {
+    stroke-dasharray: 29 299;
+  }
+  path:nth-child(3) {
+    transform-origin: 35% 63%;
+  }
+  path:nth-child(4) {
+    stroke-dasharray: 29 299;
+  }
+  path:nth-child(5) {
+    transform-origin: 61% 52%;
+  }
+  path:nth-child(6) {
+    transform-origin: 62% 52%;
+  }
+  .active path:nth-child(1) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+  }
+  .active path:nth-child(2) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+  }
+  .active path:nth-child(3) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+  }
+  .active path:nth-child(4) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+  }
+  .active path:nth-child(5) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+  }
+  .active path:nth-child(6) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+  }
+  
 
 /* header-css-start */
 
@@ -348,13 +398,9 @@ header nav .navbar-brand{
     background-color: #7d0ef726;
 }
 .banner-section .hello-title .right{
-    /* width: 4px; */
-    /* height: 50px; */
     transform: translate(99px, -50%);
 }
 .banner-section .hello-title  .left {
-    /* width: 4px; */
-    /* height: 50px; */
     transform: translate(-160px, -50%);
 }
 /* banner-section-end */
@@ -362,6 +408,7 @@ header nav .navbar-brand{
 /* about-me start */
 .about-me-section{
     padding: 152px 0 0 0;
+    overflow: hidden;
 }
 .main-heading {
     position: relative;
@@ -732,6 +779,10 @@ button:focus {
     color: #000000;
 }
 
+/* project-section end */
+
+/* ------------------------------pop-up start---------------------------- */
+
 .modal-dialog{
     max-width: 100%;
     margin: 0 auto;
@@ -778,8 +829,7 @@ button:focus {
     outline: none;
 }
 
-
-/* project-section end */
+/* ------------------------------pop-up end---------------------------- */
 
 /* testimonials-section start */
 .testimonials-section{
@@ -1208,3 +1258,440 @@ footer .copy-right li a:hover{
     color: #f1f1f1;
 }
 /* footer-start end */
+
+
+
+
+/*-------------Media Querries-----------------*/
+
+/*------------- 1366px -----------------*/
+
+@media only screen and (max-width:1366px) {
+    .social-links {
+        bottom: 5%;
+    }
+    .banner-section .hello-title {
+        margin-left: 103px;
+        margin-bottom: 10px;
+    }
+    .task-rateing-section h3 {
+        font-size: 62px;
+    }
+    .task-rateing-section span {
+        font-size: 16px;
+    }    
+    .project-section {
+        padding: 110px 0 0 0;
+    }
+    .about-me-section {
+        padding: 110px 0 0 0;
+    }    
+    .blog-section {
+        padding: 110px 0 100px;
+    }    
+    .task-rateing-section .task-cards {
+        padding: 61px 20px 52px;
+    }    
+    .contact-section {
+        padding: 110px 0;
+    }  
+    footer {
+        padding: 66px 0;
+    }  
+    footer .footer-links {
+        margin: 0 auto 55px;
+    }
+}
+
+/*------------- 1024px -----------------*/
+
+@media only screen and (max-width:1024px) {
+    .banner-section .container {
+        max-width: 930px !important;
+    }
+    .banner-section .banner-text {
+        margin-bottom: 146px;
+    }
+    .banner-section h2 {
+        font-size: 44px;
+    }
+    .social-links {
+        bottom: 50%;
+        right: 70px;
+    }
+    header nav .collapse .navbar-nav {
+        margin-right: 15px;
+        max-width: 620px;
+    }
+    .main-heading p {
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 100%;
+    }
+    .main-heading h2 {
+        font-size: 45px;
+        line-height: 45px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .project-card {
+        width: 33%;
+        height: 420px !important;
+    }
+    .b-h {
+        top: 0 !important;
+    }
+    .project-section {
+        padding: 110px 0 90px 0;
+    }
+    .test-cards:after {
+        left: 60px;
+    }    
+    .test-cards .test-text p {
+        font-size: 17px;
+    }
+    .blog-inner h3 {
+        font-size: 22px;
+        max-width: 317px;
+    }
+    .blog-inner p {
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: 8px;
+    }
+    .main-heading {
+        padding-bottom: 33px;
+        margin-bottom: 40px;
+    }
+    .testimonials-section .main-heading {
+        margin-bottom: 0px;
+    }
+    .blog-section {
+        padding: 110px 0 17px;
+    }
+
+}
+
+/*------------- 991px -----------------*/
+
+@media only screen and (max-width:991px) {
+    .banner-section h2 {
+        font-size: 37px;
+    }
+    .howdy-wrap {
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+    .howdy-wrap .h-w {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 46px;
+    }
+    .howdy-wrap .skills-ee a {
+        margin-top: 49px;
+    }
+    .works-section {
+        padding: 18px 0 64px 0;
+    }
+    .work-card {
+        padding-left: 50px;
+    }
+    .works-detail h3 {
+        font-size: 22px;
+    }
+    .works-detail .designer {
+        margin-bottom: 6px;
+    }
+    .works-detail p {
+        font-size: 19px;
+        line-height: 27px;
+    }
+    .main-heading h2 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+    .main-heading p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .test-cards .test-text {
+        width: 72%;
+    }
+    .test-cards .test-text p {
+        font-size: 14px;
+    }
+    .test-cards {
+        max-width: 77%;
+        padding: 38px 15px 0;
+        margin: 0 auto;
+    }
+    .test-cards:after {
+        left: 140px;
+    }
+    .blog-section {
+        padding: 56px 0 17px;
+    }
+    .task-rateing-section .container{
+        max-width: 100%;
+    }
+    .skills-wrap .prog-lan {
+        margin-top: 41px;
+        text-align: left;
+    }
+}
+
+/*------------- 767px -----------------*/
+
+@media only screen and (max-width:767px) {
+    .banner-section .banner-links {
+        display: flex;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .banner-section .hello-title {
+        margin-left:0;
+        margin: 0 auto 25px;
+    }
+    .banner-section h2 {
+        justify-content: center;
+        margin-bottom: 18px;
+    }
+    .banner-section .banner-links {
+        display: flex;
+        max-width: 83%;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .banner-section .banner-btn {
+        font-size: 16px;
+        padding: 11px 16px;
+        margin-left: 0;
+    }
+
+    header .header-inner {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    header .navbar {
+        padding: 26px 30px;
+    }
+    .navbar-collapse .navbar-nav {
+        max-width: 100%;
+        background-color: #af2b2b;
+        transition: 0.5s all ease-in-out;
+        height: 100vh;
+        justify-content: center !important; 
+        background-color: #af2b2b;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translate(-105% , 0);
+        align-items: center;
+    }   
+    .banner-section .banner-text {
+        width: auto;
+    }
+    .social-links{
+        display: none;
+    }
+    .project-card {
+        width: 50%;
+        height: 420px !important;
+    }
+    .navbar-light .navbar-nav .nav-item {
+        padding: 3px 8px;
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+        transition: 0.4s all ease-in-out;
+        margin-bottom: 28px;
+    } 
+    .navbar-collapse.show .navbar-nav{
+        max-width: 100%;
+        transform: translate(0 , 0)
+    }
+    .work-card .circle {
+        top: -43px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .work-card{
+        padding-left: 0px;
+    }
+    .work-card :after {
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: -27px;
+    }
+    .circle:after{
+        width: 0;
+    }
+    .test-cards {
+        max-width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .test-cards .test-img {
+        max-width: 84px;
+        height: 84px;
+        margin: 0 auto;
+    }
+    .test-cards .test-text {
+        width: 100%;
+        margin-top: 16px;
+    }
+    .test-cards:after {
+        left: 50%;
+    }
+    .blog-inner h3 {
+        font-size: 22px;
+        max-width: 100%;
+    }
+    .blog-inner h3:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    footer .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 568px;
+    }
+    footer .footer-links li {
+        margin-bottom: 30px;
+    }
+    .task-rateing-section .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .contact-links ul {
+        padding: 28px 0px 25px 0px;
+    }
+    .task-rateing-section .task-cards {
+        padding: 78px 20px 66px;
+        width: 50%;
+    }
+    .container{
+        text-align: center;
+    }
+    .navbar-light .navbar-toggler {
+        background: #fff;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/*------------- 640px -----------------*/
+
+@media only screen and (max-width:640px) {
+    .banner-section .banner-text {
+        width: auto;
+        overflow: hidden;
+    }
+    .banner-section h2 {
+        margin-bottom: 18px;
+        font-size: 33px;
+    }
+    .banner-section .banner-btn {
+        font-size: 14px;
+        padding: 9px 9px;
+        margin-left: 0;
+        max-width: 166px;
+    }
+    .banner-section {
+        background-position: -400px center;
+    }
+    .blog-cont {
+        max-width: 100%;
+        margin-bottom: 55px;
+    }
+    .modal-header {
+        padding: 10px 16px;
+    }
+    .form-control {
+        padding: 8px 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+    .form-group .mess {
+        margin-bottom: 25px;
+        resize: none;
+        height: 91px !important;
+    }
+}
+
+/*------------- 480px -----------------*/
+
+@media only screen and (max-width:480px) {
+    .banner-section h2 {
+        margin-bottom: 18px;
+        font-size: 22px;
+    }
+    .banner-section .banner-links {
+        max-width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        width: 100%;
+        height: 420px !important;
+    }
+    .main-heading h2 {
+        font-size: 29px;
+        margin-bottom: 12px;
+        line-height: 40px;
+    }
+    .main-heading p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .styleshout h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    .sign-btn {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+    .task-rateing-section .task-cards {
+        padding: 41px 20px 58px;
+        width: 100%;
+    }
+    footer .footer-links {
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-links {
+        align-items: center;
+    }
+    footer .footer-links li:after {
+        width: 100%;
+        height: 1px;
+        top: auto;
+        right: 0;
+        bottom: -14px;
+    }
+}
+
+/*------------- 320px -----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+

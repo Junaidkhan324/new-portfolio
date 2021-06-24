@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" footer="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="fonts stylesheet" href="css/fonts.css">
@@ -18,10 +18,49 @@
     <!-- header-start -->
     <header  class="nav-down">
         <div class="header-inner">
-            <nav class="navbar navbar-expand-lg navbar-light ">
+            <nav class="navbar navbar-expand-md navbar-light ">
                 <a class="navbar-brand " href="#"><img src="images/logo.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <div class="container" onclick="this.classList.toggle('active')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
+                              <g stroke-width="6.5" stroke-linecap="round">
+                                <path
+                                  d="M72 82.286h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                                  fill="none"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M72 125.143h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                                  fill="none"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 82.286h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 125.143h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                              </g>
+                            </svg>
+                      </div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
@@ -625,7 +664,7 @@
                     <p>Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
                 </div>
                 <div class="contact-inner row">
-                    <div class="col-md-8">
+                    <div class="col-md-6 col-lg-8">
                         <form>
                             <div class="form-group">
                               <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
@@ -642,7 +681,7 @@
                             <button type="submit" class="sign-btn">Submit</button>
                           </form>
                     </div>
-                    <div class="col-md-4  contact-links">
+                    <div class="col-md-6 col-lg-4 contact-links">
                         <ul>
                             <li><span>PHONE</span></li>
                             <li>Phone: (+63) 555 1212</li>
