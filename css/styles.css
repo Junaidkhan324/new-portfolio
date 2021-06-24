@@ -58,15 +58,15 @@ header {
     z-index: 1000;
     transition: 0.5s all ease-in-out;
 }
+
+.nav-up {
+    top: -83px;
+}
+
 .fixed {
     position: fixed;
     background-color: #000;
-    animation: header 0.5s;
 }
-@keyframes header {
-    from{top:-100%} 
-    to{top:0} 
-  }
 header .header-inner {
     max-width: 95%;
     margin: 0 auto;
@@ -626,6 +626,10 @@ header nav .navbar-brand{
     border-radius: 50%;
     transform: translateX(-83px);
     transition: 0.3s all ease-in-out;
+    background-color: transparent;
+}
+button:focus {
+    outline:none;
 }
 .project-card .link i{
     font-size: 25px;
@@ -727,6 +731,54 @@ header nav .navbar-brand{
 .project-card .link:hover i{
     color: #000000;
 }
+
+.modal-dialog{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.modal-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    padding: 25px 66px;
+    border-bottom: transparent;
+}
+.modal-header .modal-title{
+    font-size: 33px;
+    line-height: 1.3;
+    font-weight: 900;
+    color: #af2b2b;
+}
+.modal-body{
+    height: 99.8vh;
+    overflow: hidden;
+    padding: 0;
+}
+.modal-body img {
+    transform: scale(1) !important;
+}
+.modal{
+    padding-right: 0 !important;
+}
+
+.modal-header .close{
+    background-color: red;
+    padding: 1px 10px;
+    margin: 0px 0;
+}
+.modal-header .close span{
+    font-size: 45px;
+    line-height: 1;
+    display: block;
+}
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+    opacity: .75;
+    outline: none;
+}
+
+
 /* project-section end */
 
 /* testimonials-section start */
@@ -1036,6 +1088,7 @@ header nav .navbar-brand{
 }
 .form-group .mess{
     margin-bottom: 60px;
+    resize: none;
 }
 .contact-links ul li{
     font-size: 16px;
