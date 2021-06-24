@@ -40,6 +40,11 @@ a{
     clear: both;
 }
 
+.t-b{
+    transform: translate(0px, -171px);
+    opacity: 0;
+}
+
 
 /* header-css-start */
 
@@ -50,8 +55,18 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1000;
+    transition: 0.5s all ease-in-out;
 }
+.fixed {
+    position: fixed;
+    background-color: #000;
+    animation: header 0.5s;
+}
+@keyframes header {
+    from{top:-100%} 
+    to{top:0} 
+  }
 header .header-inner {
     max-width: 95%;
     margin: 0 auto;
@@ -108,6 +123,7 @@ header nav .navbar-brand{
 }
 .navbar-light .navbar-nav .nav-item:hover{
     transform: scale(1.4);
+    color: #862121;
 }
 .navbar-light .navbar-nav .nav-item:hover .nv-right{
     bottom: 0;
@@ -164,16 +180,33 @@ header nav .navbar-brand{
 
 /* banner-section-start */
 .banner-section{
-    background: url(../images/bg.jpg) no-repeat;
+    background: url(../images/photo-1503442862980-50ccb3f1d085.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     position: relative;
 }
+.banner-section:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s all ease-in-out;
+    background-color: rgb(0 0 0 / 82%);
+}
 .banner-section .container{
     height: 100vh;
     display: flex;
     align-items: flex-end;
+}
+.banner-section .h-t{
+    font-size:18px ;
+    color: #f44336;
+    transform: scaleX(0);
+    transform-origin: center;
 }
 .banner-section span{
     font-size: 18px;
@@ -188,6 +221,10 @@ header nav .navbar-brand{
     margin-bottom: 3px;
     font-family: 'Libre Baskerville';
 }
+.banner-text h2 p{
+    transform: translateX(142px);
+    opacity: 0;
+}
 .banner-section h2 span{
     width: 9px;
 }
@@ -195,6 +232,8 @@ header nav .navbar-brand{
     margin-bottom: 262px;
     align-items: flex-end;
     width: 100%;
+    position: relative;
+    z-index: 19;
 }
 .banner-section .hello-title{
     position: relative;
@@ -203,25 +242,27 @@ header nav .navbar-brand{
     max-width: 130px;
     margin-bottom: 20px;
 }
-.banner-section .hello-title::after{
+.banner-section .hello-title .right{
     content: '';
-    width: 60px;
-    height: 1px;
+    /* width: 60px; */
+    /* height: 1px; */
     background: #ffffff;
     position: absolute;
     top: 50%;
     left: -28%;
     transform: translate(-50%, -50%);
+    transform-origin: 50%;
 }
-.banner-section .hello-title::before{
+.banner-section .hello-title .left{
     content: '';
-    width: 60px;
-    height: 1px;
+    /* width: 60px; */
+    /* height: 1px; */
     background: #ffffff;
     position: absolute;
     top: 50%;
     right: -74%;
     transform: translate(-50%, -50%);
+    transform-origin: 50%;
 }
 .banner-section .banner-btn {
     font-size: 16px;
@@ -269,6 +310,7 @@ header nav .navbar-brand{
     right: 30px;
     width: 100%;
     max-width: 120px;
+    z-index: 10;
 }
 .social-links li{
     margin-bottom: 10px;
@@ -297,8 +339,24 @@ header nav .navbar-brand{
 .social-links li a:hover span{
     transform: scale(1);
     transform-origin: right;
+    
 }
-
+.ccolor::after{
+    background-color: #00ffdc0d;
+}
+.beut::after{
+    background-color: #7d0ef726;
+}
+.banner-section .hello-title .right{
+    /* width: 4px; */
+    /* height: 50px; */
+    transform: translate(99px, -50%);
+}
+.banner-section .hello-title  .left {
+    /* width: 4px; */
+    /* height: 50px; */
+    transform: translate(-160px, -50%);
+}
 /* banner-section-end */
 
 /* about-me start */
@@ -357,6 +415,11 @@ header nav .navbar-brand{
     flex: 0 0 47% !important;
     max-width: 50% !important;
 }
+.v-l{
+    opacity: 0;
+    transform: translate(-171px , 0px);
+    
+}
 .howdy-wrap span{
     font-size: 25px;
     line-height: 34px;
@@ -394,6 +457,8 @@ header nav .navbar-brand{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: 0;
+    transform: translate(171px , 0px);
 }
 
 .skills-wrap .prog-lan{
@@ -455,6 +520,8 @@ header nav .navbar-brand{
     padding-left: 75px;
     position: relative;
     padding-bottom: 50px;
+    opacity: 0;
+    transform: translate(-100px, 0px);
 }
 .work-card:hover .circle{
     background-color: #c5c5c5;
@@ -489,6 +556,8 @@ header nav .navbar-brand{
     line-height: 31px;
     color: #000000;
     margin-bottom: 47px;
+    opacity:0;
+    transform: translate(0 , -40px);
 }
 
 .works-detail .date {
@@ -857,8 +926,9 @@ header nav .navbar-brand{
     position: relative;
 }
 .task-rateing-section .task-cards.active{
-    background: url(../images/count-bg.jpg);
+    background-image: url(../images/count-bg.jpg);
     color: #ffffff;
+    background-color: #000000;
 }
 .task-rateing-section .active h3{
     color:#ffffff;
@@ -889,14 +959,18 @@ header nav .navbar-brand{
     font-weight: 700;
     color:#5f5d5d;
 }
-.task-rateing-section i {
+.task-rateing-section  i {
     position: absolute;
     z-index: 1;
-    font-size: 2.1rem;
+    font-size: 18px;
     line-height: 1;
-    color: #008C2C;
-    width: 24px;
-    height: 24px;
+    color: #23740f;
+    top: 39px;
+    left: 38px;
+    opacity: 0;
+}
+.task-rateing-section .active i {
+    opacity: 1;
 }
 /* task-rateing-section end */
 /* contact-section start */
@@ -912,7 +986,7 @@ header nav .navbar-brand{
     background-image: url(../images/contact-bg.jpg);
     background-repeat: no-repeat;
     background-position: center, center;
-    padding-top: 140px;
+    padding: 140px 0;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
 }
@@ -928,6 +1002,8 @@ header nav .navbar-brand{
 .contact-inner{
     position: relative;
     z-index: 10;
+    max-width: 865px;
+    margin:  0 auto;
 }
 .form-control{
     padding: 14px 0;
@@ -956,14 +1032,28 @@ header nav .navbar-brand{
 }
 
 .contact-links ul {
-    padding: 28px 0 25px;
+    padding: 28px 0px 25px 40px;
+}
+.form-group .mess{
+    margin-bottom: 60px;
 }
 .contact-links ul li{
     font-size: 16px;
     font-weight: 400;
     color: #7b7b7b;
-    line-height: 20px;
+    line-height: 30px;
     font-family: 'Libre Baskerville';
+    border-color:transparent !important;
+}
+.contact-inner .sign-btn{
+    width: 100%;
+    border: none;
+    background: #862121 !important;
+}
+.contact-inner .sign-btn:hover{
+    width: 100%;
+    background: #000000 !important;
+    color: #ffffff;
 }
 .contact-links span{
     font-size: 14px;
@@ -974,3 +1064,94 @@ header nav .navbar-brand{
     display: block;
     font-family: 'Montserrat';
 }
+.sign-btn:focus {
+    outline: none;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+/* footer-start start */
+footer{
+    background-color: #000000;
+    padding: 100px 0 ;
+}
+footer .footer-logo{
+    max-width: 134px;
+    margin: 0 auto 36px;
+}
+footer .footer-logo img{width: 100%;}
+footer .social-links {
+    text-align: right;
+    position: relative;
+    bottom: 30%;
+    right: 30px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .social-links ul li a span{
+    font-size: 15px !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: scale(1) !important;
+}
+footer .footer-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 758px;
+    margin: 0 auto 120px;
+}
+footer .footer-links a {
+    display: flex;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 3px;
+    align-items: center;
+}
+footer .footer-links a i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+footer .footer-links li{
+    position: relative;
+}
+footer .footer-links li:after {
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #5f5d5d;
+    position: absolute;
+    top: 3px;
+    right: -11px;
+}
+footer .footer-links li:last-child::after{
+    display: none;
+}
+footer .copy-right{
+    display: flex;
+    justify-content: space-between  ;
+    max-width: 329px;
+    margin: 0 auto;
+}
+footer .copy-right li{
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+}
+footer .copy-right li a{
+    color: #862121;
+    margin-left: 10px;
+}
+footer .copy-right li a:hover{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+/* footer-start end */
