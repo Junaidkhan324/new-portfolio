@@ -38,7 +38,7 @@ body {
 a{
     text-decoration: none;
     display: inline-block;
-    cursor: none;
+    cursor: none !important;
 }
 a:hover{
     cursor: none;
@@ -89,6 +89,9 @@ button:hover{
     background: transparent !important;
     padding: 0 12px;
     border-color: rgb(0 0 0 / 0%);
+    position: fixed !important;
+    top: 22px;
+    right: 24px;
 }
 svg {
     height: 73px;
@@ -103,11 +106,6 @@ svg {
     max-height: 160px;
     width: 640px;
   }
-  /* @media (max-width: 640px) {
-    .plates {
-      width: 320px;
-    }
-  } */
   .plate {
     height: 39px;
     width: 50px;
@@ -1564,6 +1562,9 @@ footer .copy-right li a:hover{
 /*------------- 767px -----------------*/
 
 @media only screen and (max-width:767px) {
+    .cursor{
+        display: none;
+    }
     .banner-section .banner-links {
         display: flex;
         max-width: 80%;
