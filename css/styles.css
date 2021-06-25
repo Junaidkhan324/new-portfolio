@@ -1824,6 +1824,8 @@ section {
     border-radius: 50px;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    
+   
   }
   .cursor::after,
   .cursor::before {
@@ -1836,6 +1838,7 @@ section {
     height: 30px;
     width: 30px;
     border-radius: 50px;
+    transition: 0.3s all ease-in-out;
   }
   .cursor::before {
     background-color: transparent;
@@ -1854,7 +1857,15 @@ section {
       transform: translate(-50%, -50%) scale(3);
     }
   }
-  
+  .cr{
+    width: 0;
+    border: none;
+  }
+  .cr:after{
+    border: 1px solid #af2b2b;
+    height: 98px;
+    width: 98px;
+  }
   /* *****
 
 

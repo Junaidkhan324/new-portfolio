@@ -32,7 +32,7 @@ $(document).ready(function(){
             toggleActions:"restart none resume reverse",
         }
     })
-    tl2.to(".work-inner h2, .work-card",1, {y:0, x:0, opacity:1, stagger:0.9 })
+    tl2.to(".work-inner h2, .work-card",1, {y:0, x:0, opacity:1, stagger:0.3 })
 });
 
 

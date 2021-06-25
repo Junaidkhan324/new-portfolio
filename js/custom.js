@@ -78,10 +78,20 @@ function hasScrolled() {
 
 $(window).on('load', function () {
     $('.loader').hide();
-  }) 
+}) 
 
 
   const cursor = document.querySelector(".cursor");
+  const cbox = document.querySelectorAll(".add");
+
+  for (let i = 0; i < cbox.length; i++) {
+      cbox[i].addEventListener("mouseenter", function() {
+        cursor.classList.add("cr");
+      });
+      cbox[i].addEventListener("mouseout", function() {
+        cursor.classList.remove("cr");
+      });
+  }
   
 window.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX + "px";
@@ -103,11 +113,16 @@ window.addEventListener("click", () => {
     cursor.classList.add("click");
   }
 });
-
-
-// *********************
-// This Code is for only the floating card in right bottom corner
-// **********************
+// pointer.addEventListener("mouseenter", () => {
+//     if (cursor.classList.contains("cr")) {
+//       cursor.classList.remove("cr");
+//       void cursor.offsetWidth; // trigger a DOM reflow
+//       cursor.classList.add("cr");
+//     } else {
+//       cursor.classList.add("cr");
+//     }
+//   });
+  
 
 
 
