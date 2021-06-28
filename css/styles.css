@@ -391,7 +391,7 @@ header nav .navbar-brand{
     opacity: 0;
 }
 .banner-section h2 span{
-    width: 9px;
+    width: 17px;
 }
 .banner-section .banner-text{
     margin-bottom: 262px;
@@ -639,17 +639,19 @@ header nav .navbar-brand{
     width: 100%;
     background-color: #00000034;
     height: 6px;
+
 }
 .skills-wrap .range-bar .range-full{
     height: 100%;
-    background: linear-gradient(
-        90deg
-        , rgb(8 148 247 / 49%) 0%, rgba(5,20,107,1) 100%);
+    background: linear-gradient( 90deg , rgb(8 148 247 / 49%) 0%, rgba(5,20,107,1) 100%);
     position: relative;
+    opacity: 0;
+    transform:scaleX(0);
+    transform-origin: left;
 }
 .howdy-wrap  .pers{
-    width: 32px;
-    height: 33px;
+    width: 34px;
+    height: 46px;
     background: url(../images/per-img.png) no-repeat;
     background-size: 31px;
     font-weight: 700;
@@ -770,13 +772,10 @@ header nav .navbar-brand{
 }
 .project-card{
     width: 25%;
-    position: relative;
     height: 340px;
     overflow: hidden;
     cursor: pointer;
-    transform: scaleY(0);
-    transform-origin: top;
-    opacity: 0;
+    position: relative;
 }
 .height{
     height: 457px;
@@ -811,6 +810,8 @@ button:focus {
     object-fit: cover;
     transform: scale(1);
     transition: 0.3s all ease-in-out;
+    transform: translateY(-100%);
+    transform-origin: top;
 }
 .project-card:after{
     content: '';
@@ -828,6 +829,9 @@ button:focus {
     bottom: 0;
     left: 0;
     z-index: 6;
+    transform: translateY(-100%);
+    transform-origin: top;
+    opacity: 0;
 }
 .project-card .card-body span{
     display: block;
@@ -1012,7 +1016,7 @@ button:focus {
     font-size: 19px;
     font-family: 'Libre Baskerville';
     font-weight: 400;
-    color: #5f5d5d;
+    color: #a7a7a7;
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -1027,7 +1031,7 @@ button:focus {
 .test-cards .test-text span.ceo {
     font-size: 12px;
     font-weight: 400;
-    color: #5f5d5d;
+    color: #a7a7a7;
     text-transform: capitalize;
 }
 /* testimonials-section end  */
@@ -1596,6 +1600,15 @@ footer .footer-links a:hover{
     header nav .collapse .navbar-nav {
         margin-right: 15px;
         max-width: 540px;
+    }
+    .task-rateing-section h3 {
+        font-size: 46px;
+    }
+    .task-rateing-section span {
+        font-size: 14px;
+    }
+    .task-rateing-section i{
+        top: 41px;
     }
 }
 

@@ -9,7 +9,6 @@ $(document).ready(function(){
     gsap.to(".hello-title .left , .hello-title .right",  { height: 2 , delay:0.6})
     gsap.to(".hello-title .left , .hello-title .right",  { width: 76 , delay:1.9})
     gsap.to(".hello-title span",  {opacity:0.3, delay:1.9})
-    gsap.to(".project-card",  {scaleY:1, delay:1.9})
     gsap.to(".t-i",  {scale:1.6, y:-20,   repeat:-1, yoyo:true}) 
 
  
@@ -23,6 +22,7 @@ $(document).ready(function(){
         }
     })
     tl1.to(".t-b , .v-l ,.skills-ee",2, {y:0, x:0, opacity:1})
+    tl1.to(".range-full",2, {scale:1, opacity:1, stagger:0.3, delay:0.1})
 
 
     let tl2 = gsap.timeline({
@@ -47,7 +47,8 @@ $(document).ready(function(){
         }
     })
     tl3.to(".project-section .main-heading ", {scale:1, opacity:1 })
-    .to(".project-card ", {scale:1, stagger: 0.2, delay:0.3 , opacity:1, yoyo:true })
+    .to(".project-card img ", {y:0, stagger: 0.1 , opacity:1 })
+    .to(".project-card .card-body", {y:0, stagger: 0.1 , opacity:1 })
     
         let tl4 = gsap.timeline({
             scrollTrigger: {
@@ -65,7 +66,7 @@ $(document).ready(function(){
                 trigger: ".contact-section",
                 start: "0%",
                 end:"0% ",
-                markers:true,
+                // markers:true,
                 toggleActions:"restart none resume reverse",
             }
         })
