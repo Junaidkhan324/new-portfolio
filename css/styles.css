@@ -485,6 +485,7 @@ header nav .navbar-brand{
     text-decoration: none;
     position: relative;
     display: inline-block;
+    transition: 0.3s all ease-in-out;
 }
 .social-links li a:hover{
     transform: scale(1.3);
@@ -505,6 +506,9 @@ header nav .navbar-brand{
     transform: scale(1);
     transform-origin: right;
     
+}
+.navbar-collapse .social-links {
+    display: none;
 }
 .ccolor::after{
     background-color: #00ffdc0d;
@@ -757,6 +761,8 @@ header nav .navbar-brand{
 }
 .project-section .main-heading{
     margin-bottom: 69px;
+    transform: scaleY(0);
+    transform-origin: top;
 }
 .project-inner{
     display: flex;
@@ -768,6 +774,9 @@ header nav .navbar-brand{
     height: 340px;
     overflow: hidden;
     cursor: pointer;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
 }
 .height{
     height: 457px;
@@ -1046,6 +1055,12 @@ button:focus {
 .blog-cont{
     max-width: 90%;
     margin-bottom: 71px;
+    overflow: hidden;
+}
+.blog-cont span, 
+.blog-cont p ,
+.blog-cont h3{
+    transform: translate(-490px , 0);
 }
 .blog-inner  h3{
     font-size: 29px;
@@ -1182,7 +1197,7 @@ button:focus {
     font-size: 18px;
     line-height: 1;
     color: #23740f;
-    top: 39px;
+    top: 70px;
     left: 38px;
     opacity: 0;
 }
@@ -1221,6 +1236,7 @@ button:focus {
     z-index: 10;
     max-width: 865px;
     margin:  0 auto;
+    overflow: hidden;
 }
 .form-control{
     padding: 14px 0;
@@ -1244,12 +1260,16 @@ button:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 0%);
 }
+.form-group{
+    transform: translate(-102% , 0px);
+}
 .mess{
     height: 250px !important;
 }
 
 .contact-links ul {
     padding: 28px 0px 25px 40px;
+    overflow: hidden;
 }
 .form-group .mess{
     margin-bottom: 60px;
@@ -1262,6 +1282,7 @@ button:focus {
     line-height: 30px;
     font-family: 'Libre Baskerville';
     border-color:transparent !important;
+    transform: translate(-126% , 0px);
 }
 .contact-inner .sign-btn{
     width: 100%;
@@ -1291,6 +1312,7 @@ button:focus {
 footer{
     background-color: #000000;
     padding: 100px 0 ;
+    text-align: center;
 }
 footer .footer-logo{
     max-width: 134px;
@@ -1562,6 +1584,19 @@ footer .footer-links a:hover{
     .project-card .card-body {
         text-align: left
     }
+    footer .footer-links li {
+        position: relative;
+        padding: 0 31px 23px;
+    }
+    footer .footer-links {
+        flex-wrap: wrap;
+        margin: 0 auto 55px;
+        justify-content: center;
+    }
+    header nav .collapse .navbar-nav {
+        margin-right: 15px;
+        max-width: 540px;
+    }
 }
 
 /*------------- 767px -----------------*/
@@ -1585,7 +1620,7 @@ footer .footer-links a:hover{
     }
     .banner-section .banner-links {
         display: flex;
-        max-width: 83%;
+        max-width: 475px;
         margin: 0 auto;
         justify-content: space-between;
         flex-direction: row;
@@ -1638,7 +1673,9 @@ footer .footer-links a:hover{
     } 
     .navbar-collapse.show .navbar-nav{
         max-width: 100%;
-        transform: translate(0 , 0)
+        transform: translate(0 , 0);
+        align-items: flex-start;
+        padding-left: 60px;
     }
     .work-card .circle {
         top: -43px;
@@ -1709,6 +1746,29 @@ footer .footer-links a:hover{
         background: #fff;
         position: relative;
         z-index: 1;
+    }
+    .navbar-collapse .social-links {
+        right: 70px;
+        top: 27vh;
+        bottom: auto;
+        display: block;
+        position: absolute;
+    }
+
+    .navbar-collapse .social-links li a span {
+        font-size: 13px !important;
+        font-weight: 900;
+        letter-spacing: 7px;
+        color: #ffffff;
+        position: absolute;
+        top: 8px;
+    }
+    .navbar-collapse .social-links li a{
+        font-size: 24px;
+    }
+
+    .navbar-collapse .social-links li {
+        margin-bottom: 45px;
     }
 }
 
