@@ -89,9 +89,6 @@ button:hover{
     background: transparent !important;
     padding: 0 12px;
     border-color: rgb(0 0 0 / 0%);
-    position: fixed !important;
-    top: 22px;
-    right: 24px;
 }
 svg {
     height: 73px;
@@ -1336,6 +1333,7 @@ footer .footer-links a {
     color: #ffffff;
     letter-spacing: 3px;
     align-items: center;
+    transition: 0.3s all ease-in-out;
 }
 footer .footer-links a i{
     font-size: 20px;
@@ -1374,6 +1372,10 @@ footer .copy-right li a{
 footer .copy-right li a:hover{
     text-decoration: none;
     color: #f1f1f1;
+}
+footer .footer-links a:hover{
+    color: #862121;
+    text-shadow: 1px 1px #862121;
 }
 /* footer-start end */
 
@@ -1556,6 +1558,9 @@ footer .copy-right li a:hover{
     .skills-wrap .prog-lan {
         margin-top: 41px;
         text-align: left;
+    }
+    .project-card .card-body {
+        text-align: left
     }
 }
 
@@ -1866,6 +1871,7 @@ section {
     border: 1px solid #af2b2b;
     height: 98px;
     width: 98px;
+    transition: 0.3s all ease-in-out;
   }
   /* *****
 

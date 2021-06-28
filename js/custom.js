@@ -56,7 +56,6 @@ setInterval(function() {
 
 function hasScrolled() {
     var st = $(this).scrollTop();
-    
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
@@ -72,27 +71,31 @@ function hasScrolled() {
             $('header').removeClass('nav-up').addClass('nav-down');
         }
     }
-    
     lastScrollTop = st;
 }
+$(".nav-link").click(function(){
+    $(".navbar-collapse").removeClass("show");
+  });
+// Header sec js start
+
+
 
 $(window).on('load', function () {
     $('.loader').hide();
 }) 
 
+const cursor = document.querySelector(".cursor");
+const cbox = document.querySelectorAll(".add");
 
-  const cursor = document.querySelector(".cursor");
-  const cbox = document.querySelectorAll(".add");
+for (let i = 0; i < cbox.length; i++) {
+    cbox[i].addEventListener("mouseenter", function() {
+    cursor.classList.add("cr");
+    });
+    cbox[i].addEventListener("mouseout", function() {
+    cursor.classList.remove("cr");
+    });
+}
 
-  for (let i = 0; i < cbox.length; i++) {
-      cbox[i].addEventListener("mouseenter", function() {
-        cursor.classList.add("cr");
-      });
-      cbox[i].addEventListener("mouseout", function() {
-        cursor.classList.remove("cr");
-      });
-  }
-  
 window.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX + "px";
   cursor.style.top = e.pageY + "px";
@@ -113,16 +116,3 @@ window.addEventListener("click", () => {
     cursor.classList.add("click");
   }
 });
-// pointer.addEventListener("mouseenter", () => {
-//     if (cursor.classList.contains("cr")) {
-//       cursor.classList.remove("cr");
-//       void cursor.offsetWidth; // trigger a DOM reflow
-//       cursor.classList.add("cr");
-//     } else {
-//       cursor.classList.add("cr");
-//     }
-//   });
-  
-
-
-
