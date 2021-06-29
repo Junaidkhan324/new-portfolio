@@ -1874,6 +1874,7 @@ footer .footer-links a:hover{
     }
     footer .footer-links {
         align-items: center;
+        margin: 0 auto 12px;
     }
     footer .footer-links li:after {
         width: 100%;
@@ -1881,6 +1882,9 @@ footer .footer-links a:hover{
         top: auto;
         right: 0;
         bottom: -14px;
+    }
+    footer .footer-links li {
+        padding: 0;
     }
 }
 
