@@ -1888,8 +1888,9 @@ footer .footer-links a:hover{
     }
 }
 
-/*------------- 320px -----------------*/
 
+/*------------- 320px -----------------*/
+/* curser start */
 section {
     min-height: 100vh;
     background-color: rgb(41, 42, 46);
