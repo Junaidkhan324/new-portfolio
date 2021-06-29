@@ -106,7 +106,6 @@ window.addEventListener("mousemove", (e) => {
 window.addEventListener("scroll", () => {
   const fromTop = cursor.getAttribute("data-fromTop");
   cursor.style.top = scrollY + parseInt(fromTop) + "px";
-  console.log(scrollY);
 });
 window.addEventListener("click", () => {
   if (cursor.classList.contains("click")) {

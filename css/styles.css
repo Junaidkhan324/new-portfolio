@@ -1459,7 +1459,7 @@ footer .footer-links a:hover{
         margin-bottom: 146px;
     }
     .banner-section h2 {
-        font-size: 44px;
+        font-size: 41px;
     }
     .social-links {
         bottom: 50%;
@@ -1523,7 +1523,7 @@ footer .footer-links a:hover{
 @media only screen and (max-width:991px) {
   
     .banner-section h2 {
-        font-size: 37px;
+        font-size: 33px;
     }
     .howdy-wrap {
         flex-direction: column;
@@ -1822,6 +1822,9 @@ footer .footer-links a:hover{
         margin-bottom: 25px;
         resize: none;
         height: 91px !important;
+    }
+    .navbar-collapse .social-links li a span{
+        display: none;
     }
 }
 
